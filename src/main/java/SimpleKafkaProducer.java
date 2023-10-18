@@ -1,4 +1,10 @@
-public class SimplaKafkaProducer {
+package com.test.kafka;
+
+import org.apache.kafka.clients.producer.KafkaProducer;
+import org.apache.kafka.clients.producer.ProducerRecord;
+import java.util.Properties;
+
+public class SimpleKafkaProducer {
 	private static final String topicName = "demo";
 	public static void main(String[] args) {
 		Properties props = new Properties();
