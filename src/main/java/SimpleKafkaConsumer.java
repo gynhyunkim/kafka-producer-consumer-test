@@ -17,8 +17,8 @@ public class SimpleKafkaConsumer {
 		props.put("group.id", "consumer01");
 		props.put("enable.auto.commit", true);
 		props.put("auto.offset.reset", "latest");
-		props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
-		props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
+		props.put("key.deserializer" , "org.apache.kafka.common.serialization.StringDeserializer");
+        props.put("value.deserializer" , "org.apache.kafka.common.serialization.StringDeserializer");
 		KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
 		consumer.subscribe(Arrays.asList("demo"));
 
